@@ -1,0 +1,297 @@
+//import packages section
+//create a class  - class classname  (every word of first letter should be capital)
+//create main method       public static void main(String args[])
+//write the code
+//close the main method
+//close the class
+ 
+comments
+single line  -- //
+multi line  -- \*      ---------------------------                 
+-------------------------------------------------
+-------------------------------------- */
+ 
+System.out.print();
+print()
+println()
+System.out.println("hello welcome to bitlabs");
+ _________________________________________________________________________________________
+variables used to hold the values
+ 
+datatype variable_name;
+dataype variable_name=value;
+int number;  //declaration
+number=10;  //initialization
+or
+ 
+int number=10; //
+  
+number=20;
+ 
+student based project
+student name  = krishna
+student rollno = 123
+student percentage =89.76
+student branch = cse
+student grade = A
+student dob = 12-04-2000
+student address=vijayawada
+student bloodgroup=o+
+studnet mobileno= 9034203204L
+ 
+data type= what is the typeof data we are storing
+  
+two types
+1.primitive - size is predefined
+2.non primitive - size is user defined
+ 
+1.boolean (true or false) = 1bit
+boolean number=true;
+ 
+Integer           floating
+2.byte =1byte               6. float =4bytes
+3.short = 2byte               7. double=8bytes
+4.int 4byte
+5. long 8bytes
+ 
+8.character (char) -->single character-->alphabet/digit/special character
+alphabet,specila or digit
+a-z or 0-9, &*(
+char value='A'; 2bytes
+ 
+nonprimitive:
+String--> group of character
+alphabets,digits or special character
+String name="sowjanya";
+String username="sowji.524@gmail.com";
+String dob="01-23-2000";
+ ______________________________________________________________
+1.addition of three numbers
+2.average of three numbers
+3.area of rectange,square
+4.perimeter of rectangle,square
+5.student-read 5 subject marks and find the percentage
+6.student-read 5 subject marks find the percentage print A,B,C,D
+7.positive or negative number
+8.even or not
+9.odd or not
+10.voter eligibility
+11.print bitlabs 10 times
+12.print 1 to 10 numbers
+13.print sum of number upto 20
+14.print 1 to 20 even numbers
+15.print 1 to 20 odd numbers
+16.print the sum of even numbers from 1 to 10
+17.print the sum of odd numbers from 1 to 10
+18.print the total even numbers from 1 to 50
+19.factor of a number
+20.perfect number
+________________________________________________________________
+1.Print the results for the following statements considering x = true and y = false
+             1. x&&y
+             2. x||y
+             3. !x
+             4. !y
+     Prompt the user input from the terminal.
+             
+     Sample Input:
+     Enter x as boolean value(true/false): 
+     true
+     Enter y as boolean value(true/false): 
+     false
+     
+     Expected Output:
+     x&&y is: false
+     x||y is: true
+     !x is: false
+     !y is: true
+_________________________________________
+class Logical
+  {
+    public static void main(String args[])
+    {
+      int x=10;
+        int y=20;
+      System.out.println((x>y) && (y<x));
+      System.out.println((x>y) || (y>x));
+      System.out.println(!(y>x));
+      System.out.println(!(x==y));
+    }
+  }
+_______________________________________________________________
+ 2.Write a program to perform the below actions and print the result. Check if the below numbers are equal or not.
+    1. 30 and 20
+    2. 20 and 20
+    3. 20 and 30
+    Prompt the user input from the terminal.
+    
+    Sample Input:
+    Enter first number: 
+    30
+    Enter second number: 
+    20
+    
+    Expected Output:
+    30 and 20 is not equal
+_______________________________________
+import java.util.Scanner;
+class EqualNot 
+{
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter first number: ");
+        int num1 = s.nextInt();
+        System.out.print("Enter second number: ");
+        int num2 = s.nextInt();
+        String result = (num1 == num2) ? "is" : "is not";
+        System.out.println(num1 + " and " + num2 + " " + result + " equal");
+    }
+}
+_______________________________________________________________________________________________
+
+ 3. Perform the following operations where a = 10 and b =20 using shorthand assignment operators and print the value of a in console for each expression.
+     1. a*= b
+     2. a-= b
+     3. a/= b
+     4. a%= b
+    Prompt the user input from the terminal.
+    
+    Sample Input:
+    Enter first value: 
+    10
+    Enter second value: 
+    20
+    
+    Expected Output:
+    a*=b is: 200
+    a-=b is: 180
+    a/=b is: 9
+    a%=b is: 9
+*/
+______________________________________
+import java.util.Scanner;
+class Assignment
+  {
+    public static void main(String args[])
+    {
+      Scanner input=new Scanner(System.in);
+      System.out.println("Enter first number:");
+      int a=input.nextInt();
+      System.out.println("Enter second number:");
+      int b=input.nextInt();
+      System.out.println("a*=b "+(a*=b));
+            System.out.println("a-=b "+(a-=b));
+            System.out.println("a/=b "+(a/=b));
+            System.out.println("a%=b "+(a%=b));
+    }
+  }
+
+_____________________________________________________________________________________________________________
+ 
+4.Write a program that swaps the values of 2 variables without using third variable.
+    Prompt the user input from the terminal.
+    
+    Sample Input:
+    Enter first number: 
+    12
+    Enter second number: 
+    45
+    
+    Expected Output:
+    Before swapping: 12 , 45
+    After swapping: 45 , 12
+________________________________________
+import java.util.Scanner;
+
+class Swapping{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the first number: ");
+        int num1 = input.nextInt();
+        System.out.print("Enter the second number: ");
+        int num2 = input.nextInt();
+        System.out.println("Before swapping: " + num1 + ", " + num2);
+        num1 = num1 + num2;
+        num2 = num1 - num2;
+        num1 = num1 - num2;
+        System.out.println("After swapping: " + num1 + ", " + num2);
+    }
+}
+____________________________________________________________________
+ 
+5.Write a program to initialize a boolean variable and print it's opposite value on console.
+  Sample Input:true
+  Expected Output:false
+______________________________________
+import java.util.Scanner;
+class Console {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the boolean value (true/false): ");
+        boolean boolValue = input.nextBoolean();
+        System.out.println("The value of the boolean variable is: " + boolValue);
+        System.out.println("The opposite value of the boolean variable is: " + !boolValue);
+    }
+}
+______________________________________________________________________
+ 
+6. Write a program to calculate the circumference of a circle and print the result in whole number. 
+  Allow user to input the cirlce radius from terminal. 
+  Sample Input:
+    radius of the circle=6
+  Expected Output:
+   Circumference of the circle=37
+   ______________________________________
+import java.util.Scanner;
+class CircumferenceOfCircle {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter radius of the circle: ");
+        int radius = input.nextInt();
+        int circumference = (int) (2 * Math.PI * radius);
+        System.out.println("Circumference of the circle = " + circumference);
+        input.close();
+    }
+}
+_____________________________________________________________________
+
+7.Write a program to calculate your percentage assuming total marks given. Print the percentage after rounding it off. 
+  Allow user to input the marks from the terminal. 
+  Sample Input:
+        maximum_marks=500
+        total_marks=348
+  Expected Output:
+        percentage= 70%
+________________________________________
+
+class Percentage
+  {
+    public static void main(String args[])
+    {
+      double phy=60,social=75,science=57,maths=84,english=72;
+       double percentage=((phy+social+science+maths+english)/500)*100;
+      System.out.println("percentage= "+percentage);
+}
+}
+        ____________________________________________________________________
+       
+
+ 
+
+ 
+ 
+[12:54 PM] Sowjanya Uppu
+    class Sample
+  {​​
+    public static void main(String args[])
+    {​​
+     int a=20,b=10,c=30;
+      int max= (a>b && a>c) ? a : (b>c ? b:c);
+      System.out.println("the greater value is"+max);
+      
+        
+      
+    }​​
+  }​​
+
+ 
