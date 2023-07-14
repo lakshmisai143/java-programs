@@ -1,0 +1,217 @@
+import java.util.Scanner;
+class Add{
+  public int add()
+  {
+    Scanner sc=new Scanner(System.in);
+    System.out.println("enter a and b values");
+    int a=sc.nextInt();
+    int b=sc.nextInt();
+    int result=a+b;
+    return result;
+  }
+  public static void main(String args[])
+  {
+    Add x=new Add();
+    int add=x.add();
+    System.out.println(add);
+  }
+}
+______________________________
+//without return without parameters
+import java.util.Scanner;
+class Even{
+  public void evenelements()
+  {
+    Scanner sc=new Scanner(System.in);
+    System.out.println("enter the size of an array");
+    int n=sc.nextInt();
+    int a[]=new int[n];
+    System.out.println("enter the array elements");
+    for(int i=0;i<n;i++)
+      {
+        a[i]=sc.nextInt();
+      }
+     System.out.println("even elements are");
+    for(int i=0;i<n;i++){
+        if(a[i]%2==0){
+         System.out.println(a[i]);
+        }
+      }
+  }
+  public static void main(String args[]){
+    Even e=new Even();
+    e.evenelements();
+  }
+}
+__________________________________
+//Without return type with parameters
+import java.util.*;
+class EvenEle
+  {
+    public void arrayEle(int a[],int size)
+    {
+     System.out.println("Elements in array are :");
+       for(int i=0;i<size;i++)
+         {
+           System.out.println(a[i]);
+         }
+    }
+    public void evenEle(int a[],int size)
+    {
+      System.out.println("Even Elements in array are : ");
+      for(int i=0;i<size;i++)
+        {
+          if(a[i]%2==0)
+          {
+            System.out.println(a[i]);
+          }
+        }
+    }
+    public static void main(String[]args)
+    {
+      EvenEle e=new EvenEle();
+       Scanner sc=new Scanner(System.in);
+      System.out.println("Enter the size of the Array");
+      int size=sc.nextInt();
+      int a[]=new int[size];
+      System.out.println("Enter The Elements in the array");
+      for(int i=0;i<size;i++)
+        {
+          a[i]=sc.nextInt();
+        }
+      e.arrayEle(a,size);
+      e.evenEle(a,size);
+    }
+  }
+____________________________________
+//Without return type with parameters
+import java.util.*;
+class EvenEle
+  {
+    public void arrayEle(int a[],int size)
+    {
+     System.out.println("Elements in array are :");
+       for(int i=0;i<size;i++)
+         {
+           System.out.println(a[i]);
+         }
+    }
+    public void evenEle(int a[],int size)
+    {
+      System.out.println("Even Elements in array are : ");
+      for(int i=0;i<size;i++)
+        {
+          if(a[i]%2==0)
+          {
+            System.out.println(a[i]);
+          }
+        }
+    }
+    public static void main(String[]args)
+    {
+      EvenEle e=new EvenEle();
+       Scanner sc=new Scanner(System.in);
+      System.out.println("Enter the size of the Array");
+      int size=sc.nextInt();
+      int a[]=new int[size];
+      System.out.println("Enter The Elements in the array");
+      for(int i=0;i<size;i++)
+        {
+          a[i]=sc.nextInt();
+        }
+      e.arrayEle(a,size);
+      e.evenEle(a,size);
+    }
+  }
+________________________________________
+import java.util.Scanner;
+class Multi{
+  public void multi(int a,int b)
+  {
+    System.out.println("the multi is"+(a*b));
+  }
+  public static void main(String args[])
+  {
+    Multi m=new Multi();
+    Scanner sc=new Scanner(System.in);
+    System.out.println("enter a valur");
+     int a=sc.nextInt();
+    System.out.println("enter b value");
+     int b=sc.nextInt();
+    m.multi(a,b);
+  }
+}
+___________________________________________
+class Multiplication{
+  public void mul(int a,int b)
+  {
+    System.out.println("the mul is"+(a*b));
+  }
+  public static void main(String args[])
+  {
+    Multiplication m=new Multiplication();
+    m.mul(10,10);
+  }
+}
+_______________________________________________
+import java.uril.Scanner;
+class Printarray{
+  public void printarray(int a[])
+  {
+    Scanner sc=new Scanner(System.in);
+    System.out.println("the array is"+);
+    
+    
+  }
+}
+______________________________________________
+//with return type with parameters
+import java.util.Scanner;
+class Sample
+  {
+    public static void main(String args[])
+    {
+      Sample s=new Sample();
+      Scanner sc=new Scanner(System.in);
+      System.out.println("enter the number");
+      int number=sc.nextInt();
+      boolean result=s.evenOrOdd(number);
+      System.out.println(result);
+     // System.out.println(s.evenOrOdd(number));
+    }
+    public boolean evenOrOdd(int number)
+    {
+      if(number%2==0)
+        return true;
+      else
+        return false;
+    }
+  }
+_____________________________________
+class Sub
+  {
+    public void sub()
+    {
+      int a=40,b=20;
+      System.out.println("the subtraction is"+(a-b));
+    }
+    public static void main(String args[])
+    {
+      Sub s=new Sub();
+      s.sub();
+    }
+  }
+____________________________________________
+class Subtraction
+  {
+    public void subtraction(int a,int b)
+    {
+      System.out.println("the subtraction is"+(a-b));
+    }
+    public static void main(String args[])
+    {
+      Subtraction s=new Subtraction();
+      s.subtraction(23,7);
+    }
+  }
+____________________________________________
