@@ -1,28 +1,168 @@
-import java.util.Scanner;
-  class Alphabet
+class Animal
+
   {
+    String name="munni";
+int age=13;
+    String breed="shepherd";
+}
+class Dog extends Animal
+  {
+    void run()
+    {
+ System.out.println("it runs daily");
+    }
     public static void main(String args[])
     {
-      Scanner sc=new Scanner(System.in);
-       System.out.println("enter name");
-      String str=sc.nextLine();
-     int vowelCount=0;
-      int consonantCount=0;
-        for(int i=0;i<str.length();i++)
-        {
-          char ch=str.charAt(i);
-          if(ch>= 'a' && ch<= 'z'){
-            if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'){
-              vowelCount++;
-          }
-          else{
-            consonantCount++;
-          }
-          }}
-    
-    System.out.println("total  number of vowels is"+vowelCount);
-    System.out.println(" total number ofconsonants is"+consonantCount);
-  
-          }
+      Dog d=new Dog();
+System.out.println(b.name); 
+    System.out.println(b.age);
+System.out.println(b.breed);
+      d.run();
+    }}
+_______________________________________________
+class Vehicle
+  {
+    String make="Suzuki";
+  }
+class Model extends Vehicle
+  {
+   String model="Shiftdizer";
+    int numDoors=4;
+  }
+class Convertable extends Model
+  {
+    boolean b=true;
+    public static void main(String args[])
+    {
+      Convertable c=new Convertable();
+      System.out.println(c.make);
+      System.out.println(c.model+" "+"the doors are"+c.numDoors);
+      System.out.println("is convertible"+c.b);
+
+    }
+  }
+_____________________________________________
+class Wild{
+  void eat(){
+    System.out.println("eating");
+  }
 }
-  _________________________________________
+class Lion extends Animal{
+  void run(){
+    System.out.println("running");
+  }
+}
+class Tiger extends Animal{
+  void capacity(){
+    System.out.println("the tiger capacity is");
+  }
+}
+class Hierarchal{
+  public static void main (String args[])
+  {
+    Tiger t=new Tiger();
+    Lion l=new Lion();
+    t.capacity();
+    l.run();
+  }
+}
+________________________________________________
+class Grandfather{
+  void m1(){
+    System.out.println("LAND");
+  }
+}
+class Father extends Grandfather{
+  void m2(){
+    System.out.println("PROPERTY");
+  }
+}
+class Son extends Father{
+  void m3(){
+    System.out.println("HOUSE");
+  }
+}
+class Daughter extends Father{
+  void m4(){
+    System.out.println("GOLD");
+  }
+}
+classs Hybrid
+  {
+  public static void main(String args[])
+    {
+    Daughter d=new Daughter();
+    Son s=new Son();
+    d.m4();
+    d.m3();
+    d.m2();
+    d.m1();
+    }
+  }
+_______________________________________
+class Grandparent{
+  void m1(){
+    System.out.println("Gold");
+  }}
+  class Parent extends Grandparent{
+    void m2(){
+      System.out.println("land");
+    }
+  }
+class Child extends Parent{
+  void m3(){
+    System.out.println("Cash");
+  }
+}
+  class Multilevel{
+    public static void main(String args[]){
+      Child c=new Child();
+      c.m3();
+      c.m2();
+      c.m1();
+    }
+  }
+__________________________________________
+class A
+  {
+    void m1(){
+    System.out.println("hello");
+  }}
+class B
+  {
+    void m2(){
+      System.out.println("hi");
+    }
+  }
+class C extends A,B
+  {
+  void m3(){
+    System.out.println("Bye");
+  }
+  }
+class Multiple{
+  public static void main(String args[]){
+    C c=new C();
+    c.m3();
+    c.m2();
+    c.m1();
+  }
+}
+________________________________________
+class P{
+  void m1(){
+    System.out.println("parent");
+  }}
+  class C extends P{
+    void m2(){
+      System.out.println("child");
+    }
+  }
+  class Single{
+    public static void main(String args[]){
+      C c=new C();
+      c.m2();
+      c.m1();
+    }
+  }
+_____________________________________________________
