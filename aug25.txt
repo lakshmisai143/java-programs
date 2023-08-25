@@ -1,0 +1,40 @@
+import java.util.Map;
+import java.util.HashMap;
+class Book
+{
+    int id;
+    String title;
+    String author;
+    int quantity;
+    Book(int id,String title,String author,int quantity)
+    {
+        this.id=id;
+        this.title=title;
+        this.author=author;
+        this.quantity=quantity;
+    }
+    public String toString()
+    {
+        return id+" "+title+" "+author+" "+quantity;
+    }
+}
+public class Main
+{
+    public static void main(String[] args) {
+        HashMap<Integer,Book> hashmap=new HashMap<Integer,Book>();
+        Book book=new Book(101,"atomichabbits","james",20);
+        Book book1=new Book(102,"Java","Balaguruswamy",40);
+        hashmap.put(1,book);
+        hashmap.put(2,book1);
+        System.out.println("iterating elements");
+        for(Map.Entry<Integer,Book> entry:hashmap.entrySet())
+        {
+            System.out.println("the key is "+entry.getKey());
+             System.out.println("the value is "+entry.getValue());
+         //   Book b=entry.getValue();
+          //  System.out.println(b.id+" "+b.title+" "+b.author+" "+b.quantity);
+        }
+
+
+    }
+}
