@@ -1,54 +1,95 @@
-/*Assignment 1: Create a Class with Encapsulation
+ import java.util.Scanner;
 
-Create a class named "Person" with private attributes: name, age, and email.
-Provide public getter and setter methods for each attribute.
-Write a displayInfo() method within the class to display all the details of the person.
-In the main method, create an object of the class and set values for the attributes using setter methods. Then, call the displayInfo() method to show the details of the person.*/
-class Person
-  {
-    private String name;
-    private int age;
-    private String email;
-    public void setName(String name)
-    {
-      this.name=name;
+public class ArrayOperations {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the size of the array: ");
+        int size = scanner.nextInt();
+        int[] arr = new int[size];
+
+        System.out.println("Enter elements of the array:");
+        for (int i = 0; i < size; i++) {
+            arr[i] = scanner.nextInt();
+        }
+
+        while (true) {
+            System.out.println("\nChoose an operation:");
+            System.out.println("1. Insert an element");
+            System.out.println("2. Delete an element");
+            System.out.println("3. Search for an element");
+            System.out.println("4. Exit");
+
+            int choice = scanner.nextInt();
+
+            switch (choice) {
+                case 1:
+                    System.out.print("Enter the element to insert: ");
+                    int insertElement = scanner.nextInt();
+                    System.out.print("Enter the position to insert (0-" + (size - 1) + "): ");
+                    int insertPosition = scanner.nextInt();
+
+                    if (insertPosition >= 0 && insertPosition < size) {
+                        for (int i = size - 1; i > insertPosition; i--) {
+                            arr[i] = arr[i - 1];
+                        }
+                        arr[insertPosition] = insertElement;
+                        size++;
+                        System.out.println("Element inserted successfully.");
+                    } else {
+                        System.out.println("Invalid position. Element not inserted.");
+                    }
+                    break;
+
+                case 2:
+                    System.out.print("Enter the element to delete: ");
+                    int deleteElement = scanner.nextInt();
+
+                    int deleteIndex = -1;
+                    for (int i = 0; i < size; i++) {
+                        if (arr[i] == deleteElement) {
+                            deleteIndex = i;
+                            break;
+                        }
+                    }
+
+                    if (deleteIndex != -1) {
+                        for (int i = deleteIndex; i < size - 1; i++) {
+                            arr[i] = arr[i + 1];
+                        }
+                        size--;
+                        System.out.println("Element deleted successfully.");
+                    } else {
+                        System.out.println("Element not found in the array.");
+                    }
+                    break;
+
+                case 3:
+                    System.out.print("Enter the element to search: ");
+                    int searchElement = scanner.nextInt();
+
+                    boolean found = false;
+                    for (int i = 0; i < size; i++) {
+                        if (arr[i] == searchElement) {
+                            System.out.println("Element found at position " + i);
+                            found = true;
+                            break;
+                        }
+                    }
+
+                    if (!found) {
+                        System.out.println("Element not found in the array.");
+                    }
+                    break;
+
+                case 4:
+                    scanner.close();
+                    System.exit(0);
+
+                default:
+                    System.out.println("Invalid choice. Please select a valid operation.");
+            }
+        }
     }
-    public String getName()
-    {
-      return name;
-    }
-    public void setAge(int age)
-    {
-      this.age=age;
-    }
-    public int getAge()
-    {
-      return age;
-    }
-    public void setEmail(String email)
-    {
-      this.email=email;
-    }
-    public String getEmail()
-    {
-      return email;
-    }
-public void displayInfo()
-    {
-      System.out.println("the name of the person is"+getName());
-      System.out.println("the age is"+getAge());
-      System.out.println("the email is"+getEmail());
-    }
-  }
-class Sample{
-  public static void main(String args[])
-  {
-  Person p=new Person();
-    p.setName("sai");
-    p.setAge(21);
-    p.setEmail("saireddy2001k@gmail.com");
-    p.displayInfo();
-  }
 }
-
-
+}
